@@ -10,7 +10,6 @@ from django.urls import reverse_lazy
 
 from PIL import Image
 
-from ..TestTask2.settings import MEDIA_URL
 from .forms import PostForm, TestForm
 from .models import Original
 
@@ -152,7 +151,7 @@ def image_form(request):
         name_mod = name_url_file
         img_mod.save('media\\Modified_img\\' + str(name_mod))
 
-    context = {'name_mod': name_mod, 'MEDIA_URL': MEDIA_URL, 'width': width, 'height': height, 'form': form}
+    context = {'name_mod': name_mod, 'width': width, 'height': height, 'form': form}
 
     return render(request, 'image.html', context)
 

@@ -10,7 +10,7 @@ from django.urls import reverse_lazy
 
 from PIL import Image
 
-from TestTask2.settings import MEDIA_URL
+from ..TestTask2.settings import MEDIA_URL
 from .forms import PostForm, TestForm
 from .models import Original
 

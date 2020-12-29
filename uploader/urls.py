@@ -1,6 +1,6 @@
 from django.urls import path
 
-from ..uploader.views import home, AddOriginal, image_form
+from .views import home, AddOriginal, image_form
 
 urlpatterns = [
 

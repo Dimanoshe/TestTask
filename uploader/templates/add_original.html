@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Новое изображение</title>
+    </head>
+
+    <body>
+
+         <p><a href="{% url 'home' %}">Назад к списку</a></p>
+        <h1>Новое изображение</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Отправить</button>
+    </form>
+
+        <br>
+
+
+    </body>
+</html>

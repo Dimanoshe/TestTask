@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Список</title>
+    </head>
+
+    <body>
+        <h1>Список изображений</h1>
+        {% if images %}
+
+            <ul>
+                {% for i in images %}
+
+                    <p><a href="..{{ MEDIA_URL }}/Original_img/{{ i.image }}">{{ i.image }}</a></p>
+                    <p><a href="..{{ MEDIA_URL }}/Original_img/{{ i.image_url }}">{{ i.image_url }}</a></p>
+
+
+
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Нет доступных изображений</p>
+        {% endif %}
+
+        <p><a href="post">Добавить изображение</a></p>
+    </body>
+</html>

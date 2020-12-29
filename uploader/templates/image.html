@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Изображение</title>
+</head>
+<body>
+<p><a href="{% url 'home' %}">Назад к списку</a></p>
+
+<h1>{{ name_mod }}{{ test }}</h1>
+
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Отправить">
+    </form>
+
+    <img src="..{{ MEDIA_URL }}/Modified_img/{{ name_mod }}" alt={{ name_mod }}>
+
+</body>
+</html>
